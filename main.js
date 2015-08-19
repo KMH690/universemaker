@@ -73,13 +73,6 @@ function buyTeller(){
 setInterval(function(){
 	interest(cps);
 }, 1000);
-var save = {
-    cash: cash,
-    Bank: Bank,
-    Flyer: Flyer,
-	Job: Job,
-	Teller: Teller
-};
 setInterval(function(){
 	localStorage.setItem("save",JSON.stringify(save));
 }, 5000);
