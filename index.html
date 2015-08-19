@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+		<title>Bank Idle</title>
+	</head>
+	<body>
+		<table style="width:100%">
+			<tr>
+			<td>Cash</td>
+			<td><span id="cash"></span></td>
+			<td></td>
+			<td><button type="button"
+				onClick="buyBank()">
+				Open Bank</button>
+			</td>
+			<td><span id="BankCost">10</span></td>
+			<td><span id="Bank">0</span><br /></td>
+		  </tr>
+		  <tr>
+			<td>Cash per second</td>
+			<td><span id="cps"></span></td>
+			<td></td>
+			<td><button type="button"
+				onClick="buyFlyer()">
+				Pass out Flyers</button>
+			</td>
+			<td><span id="FlyerCost">50</span><br /></td>		
+			<td><span id="Flyer">0</span><br /></td>
+		  </tr>
+		  <tr>
+			<td><button type="button"
+				onClick="buyJob()">
+				Open Job Applications</button>
+			</td>
+			<td><span id="JobCost">100</span></td>
+			<td><span id="Job">0</span></td>
+			<td><button type="button"
+				onClick="buyTeller()">
+				Hire a Teller</button>
+			</td>
+			<td><span id="TellerCost">500</span></td>
+			<td><span id="Teller">0</span></td>
+			
+		  </tr>
+		</table>
+		<img src="http://www.williamsacct.com/wp-content/uploads/2015/04/Intermediary-bank1.jpg">
+		<button type="button"
+		onClick=localStorage.removeItem("save")>
+		Delete Save</button>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
