@@ -1,25 +1,53 @@
-var save = {
-    cash: cash,
-    Bank: Bank,
-    Flyer: Flyer,
-	Job: Job,
-	Teller: Teller
+var EnergyNum = 0;
+var MatterNum = 0;
+var QuarkNum = 0;
+var ElectronNum = 0;
+var NeutronNum = 0;
+var ProtonNum = 0;
+var NucleusNum = 0;
+var AtomNum = 0;
+function EnergySecond(number){
+	EnergyNum = EnergyNum + number;
+	document.getElementById('EnergyNum').innerHTML = EnergyNum;
 };
-function load() {
-	var savegame = JSON.parse(localStorage.getItem("save"));
+function MatterSecond(number){
+	MatterNum = MatterNum + number;
+	document.getElementById('MatterNum').innerHTML = MatterNum;
 };
-var cash = 10;
-function interest(number){
-	cash = cash + number;
-	document.getElementById('cash').innerHTML = cash;
+function NucleusSecond(number){
+	NucleusNum = NucleusNum + number;
+	document.getElementById('NucleusNum').innerHTML = NucleusNum;
 };
-var cps = 0;
-var Bank = 0;
-var Flyer = 0;
-var Job = 0;
-var Teller = 0;
+function ElectronSecond(number){
+	ElectronNum = ElectronNum + number;
+	document.getElementById('ElectronNum').innerHTML = ElectronNum;
+};
+function ProtonSecond(number){
+	ProtonNum = ProtonNum + number;
+	document.getElementById('ProtonNum').innerHTML = ProtonNum;
+};
+function NeutronSecond(number){
+	NeutronNum = NeutronNum + number;
+	document.getElementById('NeutronNum').innerHTML = NeutronNum;
+};
+function QuarkSecond(number){
+	QuarkNum = QuarkNum + number;
+	document.getElementById('QuarkNum').innerHTML = QuarkNum;
+};
+function AtomSecond(number){
+	AtomNum = AtomNum + number;
+	document.getElementById('AtomNum').innerHTML = AtomNum;
+};
+var eps = 0;
+var mps = 1;
+var qps = 0;
+var elps = 0;
+var neps = 0;
+var pps = 0;
+var nps = 0;
+var aps = 0;
 function buyBank(){
-    var BankCost = Math.floor(10 * Math.pow(1.1,Bank));     
+    var BankCost = 
     if(cash >= BankCost){                                   
         Bank = Bank + 1;
 		cps = cps + 1;
@@ -28,11 +56,9 @@ function buyBank(){
 		document.getElementById('cps').innerHTML = cps;
         document.getElementById('cash').innerHTML = cash;  
     };
-    var nextCost = Math.floor(10 * Math.pow(1.1,Bank));       
-    document.getElementById('BankCost').innerHTML = nextCost;  
 };
 function buyFlyer(){
-    var FlyerCost = Math.floor(50 * Math.pow(1.1,Flyer));     
+    var FlyerCost =     
     if(cash >= FlyerCost){                                   
         Flyer = Flyer + 10;
 		cps = cps + 10;
@@ -41,11 +67,9 @@ function buyFlyer(){
 		document.getElementById('cps').innerHTML = cps;
         document.getElementById('cash').innerHTML = cash;  
     };
-    var nextCost = Math.floor(50 * Math.pow(1.1,Flyer));       
-    document.getElementById('FlyerCost').innerHTML = nextCost;  
 };
 function buyJob(){
-    var JobCost = Math.floor(100 * Math.pow(1.1,Job));     
+    var JobCost = 
     if(cash >= JobCost){                                   
         Job = Job + 50;
 		cps = cps + 50;
@@ -54,11 +78,9 @@ function buyJob(){
 		document.getElementById('cps').innerHTML = cps;
         document.getElementById('cash').innerHTML = cash;  
     };
-    var nextCost = Math.floor(100 * Math.pow(1.1,Job));       
-    document.getElementById('JobCost').innerHTML = nextCost;  
 };
 function buyTeller(){
-    var TellerCost = Math.floor(500 * Math.pow(1.1,Teller));     
+    var TellerCost =      
     if(cash >= TellerCost){                                   
         Teller = Teller + 100;
 		cps = cps + 100;
@@ -67,12 +89,14 @@ function buyTeller(){
 		document.getElementById('cps').innerHTML = cps;
         document.getElementById('cash').innerHTML = cash;  
     };
-    var nextCost = Math.floor(500 * Math.pow(1.1,Teller));       
-    document.getElementById('TellerCost').innerHTML = nextCost;  
 };
 setInterval(function(){
-	interest(cps);
+	EnergySecond(eps);
+	MatterSecond(mps);
+	QuarkSecond(qps);
+	ElectronSecond(elps);
+	NeutronSecond(Neps);
+	ProtonSecond(pps);
+	NucleusSecond(nps);
+	AtomSecond(aps);
 }, 1000);
-setInterval(function(){
-	localStorage.setItem("save",JSON.stringify(save));
-}, 5000);
