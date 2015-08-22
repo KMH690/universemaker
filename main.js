@@ -2,10 +2,13 @@ var EnergyNum = 0;
 var MatterNum = 0;
 var QuarkNum = 0;
 var ElectronNum = 0;
+var QuarkNum = 0;
 var NeutronNum = 0;
 var ProtonNum = 0;
 var NucleusNum = 0;
 var AtomNum = 0;
+var EnergyNum = 35;
+var MatterNum = 0;
 function EnergySecond(number){
 	EnergyNum = EnergyNum + number;
 	document.getElementById('EnergyNum').innerHTML = EnergyNum;
@@ -46,16 +49,23 @@ var neps = 0;
 var pps = 0;
 var nps = 0;
 var aps = 0;
-function buyBank(){
-    var BankCost = 
-    if(cash >= BankCost){                                   
-        Bank = Bank + 1;
-		cps = cps + 1;
-    	cash = cash - BankCost;                          
-        document.getElementById('Bank').innerHTML = Bank;
-		document.getElementById('cps').innerHTML = cps;
-        document.getElementById('cash').innerHTML = cash;  
-    };
+function makeQuark(){
+    var QuarkCostEnergy = 10;
+    var QuarkCostMatter = 1;
+    if(EnergyNum >= QuarkCostEnergy){
+    if(MatterNum >= QuarkCostMatter){
+        QuarkNum = QuarkNum + 1;
+		eps = eps + 1;
+    	EnergyNum = EnergyNum - QuarkCostEnergy;
+    	MatterNum = MatterNum - QuarkCostMatter;
+        document.getElementById('QuarkNum').innerHTML = QuarkNum;
+		document.getElementById('eps').innerHTML = eps;
+        document.getElementById('EnergyNum').innerHTML = EnergyNum; 
+        document.getElementById('MatterNum').innerHTML = MatterNum;
+    } else {
+    } else {
+    }
+    }
 };
 function buyFlyer(){
     var FlyerCost =     
