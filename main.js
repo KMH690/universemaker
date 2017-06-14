@@ -1,5 +1,3 @@
-var EnergyNum = 0;
-var MatterNum = 0;
 var QuarkNum = 0;
 var ElectronNum = 0;
 var QuarkNum = 0;
@@ -49,7 +47,7 @@ var neps = 0;
 var pps = 0;
 var nps = 0;
 var aps = 0;
-function makeQuark(){
+function buyQuark(){
     var QuarkCostEnergy = 10;
     var QuarkCostMatter = 1;
     if(EnergyNum >= QuarkCostEnergy){
